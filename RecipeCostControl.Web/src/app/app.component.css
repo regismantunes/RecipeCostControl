@@ -1,0 +1,17 @@
+html {
+  background: #C9C9C9;
+}
+
+body {
+  max-width: 800px;
+  background: #ffffff;
+}
+
+html, body {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  min-height: 100%;
+}

@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()">
+  <input type="text" [(ngModel)]="ingredient.name" placeholder="Name">
+  <input type="text" [(ngModel)]="ingredient.measurementUnitId" placeholder="Unit">
+  <input type="number" [(ngModel)]="ingredient.cost" placeholder="Cost">
+  <button type="submit">Save</button>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</form>

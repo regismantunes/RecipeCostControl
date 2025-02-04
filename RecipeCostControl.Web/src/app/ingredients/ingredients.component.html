@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Ingredients List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ingredient of ingredients$ | async">
+      <td>{{ingredient.name}}</td>
+      <td>{{ingredient.measurementUnitId}}</td>
+      <td>{{ingredient.cost|currency}}</td>
+    </tr>
+  </tbody>
+</table>

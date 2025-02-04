@@ -1,0 +1,13 @@
+<table>
+  <thead>
+    <tr>
+      <th>Packaging List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let packaging of packaging$ | async">
+      <td>{{packaging.name}}</td>
+      <td>{{packaging.cost}}</td>
+    </tr>
+  </tbody>
+</table>

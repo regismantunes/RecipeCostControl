@@ -1,0 +1,391 @@
+[
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Ingredient, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.IngredientDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Ingredient, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.IngredientDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "api/Ingredient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.IngredientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Ingredient, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.IngredientDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Ingredient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Ingredient, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.IngredientDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "api/Ingredient/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.IngredientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Ingredient, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.IngredientDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Ingredient/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.MeasuremantUnitController",
+    "Method": "Get",
+    "RelativePath": "api/MeasuremantUnit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.MeasuremantUnitController",
+    "Method": "GetAllConversions",
+    "RelativePath": "api/MeasuremantUnit/conversion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.MeasuremantUnitController",
+    "Method": "GetConversion",
+    "RelativePath": "api/MeasuremantUnit/conversion/{idFrom}/{idTo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFrom",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "idTo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.MeasuremantUnitController",
+    "Method": "GetConversionsFrom",
+    "RelativePath": "api/MeasuremantUnit/conversion/from/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.MeasuremantUnitController",
+    "Method": "GetConversionsTo",
+    "RelativePath": "api/MeasuremantUnit/conversion/to/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Packaging, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.PackagingDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Packaging",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Packaging, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.PackagingDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "api/Packaging",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.PackagingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Packaging, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.PackagingDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Packaging/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Packaging, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.PackagingDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "api/Packaging/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.PackagingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Packaging, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.PackagingDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Packaging/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Product, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.ProductDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Product, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.ProductDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "api/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Product, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.ProductDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Product, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.ProductDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.ProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Product, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.ProductDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Product/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Recipe, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.RecipeDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Recipe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Recipe, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.RecipeDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Post",
+    "RelativePath": "api/Recipe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.RecipeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Recipe, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.RecipeDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Get",
+    "RelativePath": "api/Recipe/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Recipe, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.RecipeDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Put",
+    "RelativePath": "api/Recipe/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "value",
+        "Type": "RecipeCostControl.Data.Dto.RecipeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeCostControl.API.Controllers.GenericController\u00602[[RecipeCostControl.Data.Entities.Recipe, RecipeCostControl.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[RecipeCostControl.Data.Dto.RecipeDto, RecipeCostControl.Data.Dto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "Method": "Delete",
+    "RelativePath": "api/Recipe/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

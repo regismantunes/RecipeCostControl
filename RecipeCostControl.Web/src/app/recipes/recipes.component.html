@@ -1,0 +1,15 @@
+<table>
+  <thead>
+    <tr>
+      <th>Recipes List</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let recipe of recipes$ | async">
+      <td>{{recipe.name}}</td>
+      <td>{{recipe.measurementUnitId}}</td>
+      <td>{{recipe.yealdQuantity}}</td>
+      <td>{{recipe.cost}}</td>
+    </tr>
+  </tbody>
+</table>

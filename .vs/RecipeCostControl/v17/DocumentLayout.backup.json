@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Source\\Repos\\RecipeCostControl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1425E-3380-4D76-BF82-B1645FA624DA}|RecipeCostControl.Tests\\RecipeCostControl.Tests.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.tests\\moq\\ingredientservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04F1425E-3380-4D76-BF82-B1645FA624DA}|RecipeCostControl.Tests\\RecipeCostControl.Tests.csproj|solutionrelative:recipecostcontrol.tests\\moq\\ingredientservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\properties\\assembly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\properties\\assembly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470E61FF-9955-4ADC-BFA6-B0B5CBC304BB}|RecipeCostControl.Services\\RecipeCostControl.Services.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.services\\measuremantunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{470E61FF-9955-4ADC-BFA6-B0B5CBC304BB}|RecipeCostControl.Services\\RecipeCostControl.Services.csproj|solutionrelative:recipecostcontrol.services\\measuremantunitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\routes\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\routes\\webapplicationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\extensions\\webapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\extensions\\webapplicationbuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\routes\\measuremantunitmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\routes\\measuremantunitmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|d:\\source\\repos\\recipecostcontrol\\recipecostcontrol.api\\routes\\identityentitymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D347BFE4-CB42-4B67-A857-007287F8EB7A}|RecipeCostControl.API\\RecipeCostControl.API.csproj|solutionrelative:recipecostcontrol.api\\routes\\identityentitymap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Assembly.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Properties\\Assembly.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Properties\\Assembly.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Properties\\Assembly.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Properties\\Assembly.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T14:15:39.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MeasuremantUnitService.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.Services\\MeasuremantUnitService.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.Services\\MeasuremantUnitService.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.Services\\MeasuremantUnitService.cs",
+              "RelativeToolTip": "RecipeCostControl.Services\\MeasuremantUnitService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T14:15:05.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IngredientServiceTest.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.Tests\\Moq\\IngredientServiceTest.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.Tests\\Moq\\IngredientServiceTest.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.Tests\\Moq\\IngredientServiceTest.cs",
+              "RelativeToolTip": "RecipeCostControl.Tests\\Moq\\IngredientServiceTest.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAQwGYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T15:33:55.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebApplicationBuilderExtensions.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Extensions\\WebApplicationBuilderExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:32:49.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WebApplicationExtensions.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\WebApplicationExtensions.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Routes\\WebApplicationExtensions.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\WebApplicationExtensions.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Routes\\WebApplicationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:19:54.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MeasuremantUnitMap.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\MeasuremantUnitMap.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Routes\\MeasuremantUnitMap.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\MeasuremantUnitMap.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Routes\\MeasuremantUnitMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:19:42.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IdentityEntityMap.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\IdentityEntityMap.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Routes\\IdentityEntityMap.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Routes\\IdentityEntityMap.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Routes\\IdentityEntityMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:17:42.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Program.cs",
+              "RelativeDocumentMoniker": "RecipeCostControl.API\\Program.cs",
+              "ToolTip": "D:\\Source\\Repos\\RecipeCostControl\\RecipeCostControl.API\\Program.cs",
+              "RelativeToolTip": "RecipeCostControl.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T13:09:14.83Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

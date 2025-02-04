@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\RecipeCostControl.Web.Blazor.props" />
+</Project>
