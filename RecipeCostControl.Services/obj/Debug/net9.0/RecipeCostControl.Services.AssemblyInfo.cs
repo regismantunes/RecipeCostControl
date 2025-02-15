@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RecipeCostControl.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffdbb2c04a20e16c9bcc29d38c649d3b36c15ca6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b5144b5863cd396a5b220557ac238360b39c4fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("RecipeCostControl.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RecipeCostControl.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

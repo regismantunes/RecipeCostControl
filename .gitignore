@@ -1,0 +1,36 @@
+# Ignore Visual Studio user-specific files
+.vs/
+
+# Ignore compiled files
+*.dll
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.cache
+*.lib
+*.bcmap
+*.exp
+*.ilk
+*.map
+*.ncb
+*.sdf
+*.ipch
+*.db
+*.opendb
+*.suo
+*.user
+*.tlog
+*.log
+*.idb
+*.aps
+*.res
+*.sbr
+*.ipdb
+*.iobj
+*.VC.db
+*.VC.VC.opendb
+
+# Ignore build output directories
+bin/
+obj/

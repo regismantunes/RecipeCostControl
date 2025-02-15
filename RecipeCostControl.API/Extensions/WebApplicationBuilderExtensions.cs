@@ -6,7 +6,7 @@ using RecipeCostControl.Data.Repositories;
 using RecipeCostControl.Services.Interfaces;
 using RecipeCostControl.Services;
 using RecipeCostControl.API.Middlewares;
-using RecipeCostControl.API.Routes;
+using RecipeCostControl.API.Extensions;
 
 namespace RecipeCostControl.API.Extensions
 {

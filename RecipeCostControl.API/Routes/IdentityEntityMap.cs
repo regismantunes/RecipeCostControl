@@ -7,15 +7,15 @@ namespace RecipeCostControl.API.Routes
 {
     internal static class IdentityEntityMap
     {
-        public static void AddMinimalApi<T, TDto>(this IEndpointRouteBuilder builder) where T : class, IIdentityEntity
+        public static void MapEntity<T, TDto>(this IEndpointRouteBuilder builder) where T : class, IIdentityEntity
         {
-            builder.MapGet("", async (IService<T> service, IMapper mapper) =>
+            builder.MapGet(string.Empty, static async (IService<T> service, IMapper mapper) =>
             {
                 var entities = await service.GetAllAsync();
                 return Results.Ok(entities.Select(mapper.Map<TDto>));
             });
 
-            builder.MapGet("{id}", async (IService<T> service, IMapper mapper, int id) =>
+            builder.MapGet("{id}", static async (IService<T> service, IMapper mapper, int id) =>
             {
                 var entity = await service.GetByIdAsync(id);
                 if (entity is null)
@@ -24,14 +24,14 @@ namespace RecipeCostControl.API.Routes
                 return Results.Ok(mapper.Map<TDto>(entity));
             });
 
-            builder.MapPost("", async (IService<T> service, IMapper mapper, [FromBody] TDto value) =>
+            builder.MapPost(string.Empty, static async (IService<T> service, IMapper mapper, [FromBody] TDto value) =>
             {
                 var entity = mapper.Map<T>(value);
                 entity = await service.InsertAsync(entity);
                 return Results.Ok(entity);
             });
 
-            builder.MapPut("{id}", async (IService<T> service, IMapper mapper, int id, [FromBody] TDto value) =>
+            builder.MapPut("{id}", static async (IService<T> service, IMapper mapper, int id, [FromBody] TDto value) =>
             {
                 var entity = mapper.Map<T>(value);
                 entity.Id = id;
@@ -39,7 +39,7 @@ namespace RecipeCostControl.API.Routes
                 return Results.Ok();
             });
 
-            builder.MapDelete("{id}", async (IService<T> service, int id) =>
+            builder.MapDelete("{id}", static async (IService<T> service, int id) =>
             {
                 await service.DeleteAsync(id);
                 return Results.Ok();
