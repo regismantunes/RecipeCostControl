@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using RecipeCostControl.Data.Entities;
+﻿using RecipeCostControl.Data.Entities;
 using RecipeCostControl.Data.Repositories.Interfaces;
 using RecipeCostControl.Services.Interfaces;
 
@@ -24,11 +23,10 @@ namespace RecipeCostControl.Services
                 .Where(x => x.MeasurementUnitToId.Equals(id, StringComparison.OrdinalIgnoreCase));
         }
 
-        public Task<MeasurementUnitConversion?> GetConversionAsync(string idFrom, string idTo)
+        public MeasurementUnitConversion? GetConversionAsync(string idFrom, string idTo)
         {
             return GetAllConversionsFrom(idFrom)
-                .Where(x => x.MeasurementUnitTo.Id.Equals(idTo, StringComparison.OrdinalIgnoreCase))
-                .FirstOrDefaultAsync();
+                .FirstOrDefault(x => x.MeasurementUnitTo.Id.Equals(idTo, StringComparison.OrdinalIgnoreCase));
         }
 
         public IQueryable<MeasurementUnitConversion> GetAllConversions()

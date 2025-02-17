@@ -21,14 +21,14 @@ namespace RecipeCostControl.Services
             return await repository.InsertAsync(entity);
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
-            await repository.UpdateAsync(entity);
+            return await repository.UpdateAsync(entity);
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            await repository.DeleteAsync(id);
+            return await repository.DeleteAsync(id);
         }
     }
 }

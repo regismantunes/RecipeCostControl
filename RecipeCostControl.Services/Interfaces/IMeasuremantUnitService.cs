@@ -11,7 +11,7 @@ namespace RecipeCostControl.Services.Interfaces
         IQueryable<MeasurementUnitConversion> GetAllConversionsFrom(string id);
         
         IQueryable<MeasurementUnitConversion> GetAllConversionsTo(string id);
-        
-        Task<MeasurementUnitConversion?> GetConversionAsync(string idFrom, string idTo);
+
+        MeasurementUnitConversion? GetConversionAsync(string idFrom, string idTo);
     }
 }

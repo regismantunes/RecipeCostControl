@@ -9,12 +9,16 @@ namespace RecipeCostControl.Data.Repositories
     {
         private readonly DbSet<T> _dbSet = context.Set<T>();
 
-        public async Task DeleteAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
             var entity = new T() { Id = id };
             var myEntity = await ReadAsync(entity);
+            if (myEntity is null)
+                return false;
+
             _dbSet.Remove(myEntity);
             await context.SaveChangesAsync();
+            return true;
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -41,20 +45,24 @@ namespace RecipeCostControl.Data.Repositories
             return entity;
         }
 
-        private async Task<T> ReadAsync(T entity)
+        private async Task<T?> ReadAsync(T entity)
         {
-            ArgumentNullException.ThrowIfNull(entity.Id, nameof(entity.Id));
+            ArgumentNullException.ThrowIfNull(entity?.Id, nameof(entity.Id));
 
-            return await ReadAsync(entity.Id.Value) ?? throw new Exception($"{typeof(T).Name} with Id {entity.Id} not found.");
+            return await ReadAsync(entity.Id.Value);
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
             var myEntity = await ReadAsync(entity);
+            if (myEntity is null)
+                return false;
+
             myEntity.CopyFrom(entity);
 
             _dbSet.Update(myEntity);
             await context.SaveChangesAsync();
+            return true;
         }
     }
 }

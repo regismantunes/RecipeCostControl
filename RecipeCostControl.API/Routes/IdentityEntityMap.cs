@@ -24,25 +24,30 @@ namespace RecipeCostControl.API.Routes
                 return Results.Ok(mapper.Map<TDto>(entity));
             });
 
-            builder.MapPost(string.Empty, static async (IService<T> service, IMapper mapper, [FromBody] TDto value) =>
+            builder.MapPost(string.Empty, static async (IService<T> service, IMapper mapper, LinkGenerator linkGenerator, HttpContext context, [FromBody] TDto value) =>
             {
                 var entity = mapper.Map<T>(value);
                 entity = await service.InsertAsync(entity);
-                return Results.Ok(entity);
+
+                var uri = linkGenerator.GetPathByAction(context, $"Get{typeof(T).Name}ById", null, new { id = entity.Id });
+                return Results.Created(uri, entity);
             });
 
             builder.MapPut("{id}", static async (IService<T> service, IMapper mapper, int id, [FromBody] TDto value) =>
             {
                 var entity = mapper.Map<T>(value);
                 entity.Id = id;
-                await service.UpdateAsync(entity);
-                return Results.Ok();
+
+                return await service.UpdateAsync(entity) ?
+                    Results.NoContent() :
+                    Results.NotFound();
             });
 
             builder.MapDelete("{id}", static async (IService<T> service, int id) =>
             {
-                await service.DeleteAsync(id);
-                return Results.Ok();
+                return await service.DeleteAsync(id) ?
+                    Results.NoContent() :
+                    Results.NotFound();
             });
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace RecipeCostControl.Data.Dto
 {
-    public sealed record PackagingDto(
+    public record struct PackagingDto(
         int? Id,
         string Name,
         string MeasurementUnitId,

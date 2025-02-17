@@ -1,6 +1,6 @@
 ﻿namespace RecipeCostControl.Data.Dto
 {
-    public sealed record RecipeDto(
+    public record struct RecipeDto(
         int? Id,
         string Name,
         IEnumerable<RecipeItemDto> Items,

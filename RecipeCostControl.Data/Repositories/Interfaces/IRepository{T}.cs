@@ -7,7 +7,7 @@ namespace RecipeCostControl.Data.Repositories.Interfaces
         Task<IEnumerable<T>> GetAllAsync();
         Task<T?> ReadAsync(int id);
         Task<T> InsertAsync(T entity);
-        Task UpdateAsync(T entity);
-        Task DeleteAsync(int id);
+        Task<bool> UpdateAsync(T entity);
+        Task<bool> DeleteAsync(int id);
     }
 }

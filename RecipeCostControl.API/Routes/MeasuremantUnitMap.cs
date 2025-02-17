@@ -15,9 +15,9 @@ namespace RecipeCostControl.API.Routes
                 return Results.Ok(entities.Select(mapper.Map<MeasurementUnitDto>));
             });
 
-            builder.MapGet("conversion/{idFrom}/{idTo}", static async (IMeasuremantUnitService service, IMapper mapper, string idFrom, string idTo) =>
+            builder.MapGet("conversion/{idFrom}/{idTo}", static (IMeasuremantUnitService service, IMapper mapper, string idFrom, string idTo) =>
             {
-                var entity = await service.GetConversionAsync(idFrom, idTo);
+                var entity = service.GetConversionAsync(idFrom, idTo);
                 if (entity is null)
                     return Results.NotFound();
 

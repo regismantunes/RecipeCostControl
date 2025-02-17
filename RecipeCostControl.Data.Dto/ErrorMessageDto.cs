@@ -1,4 +1,4 @@
 ﻿namespace RecipeCostControl.Data.Dto
 {
-    public sealed record ErrorMessageDto(string Message);
+    public record struct ErrorMessageDto(string Message);
 }

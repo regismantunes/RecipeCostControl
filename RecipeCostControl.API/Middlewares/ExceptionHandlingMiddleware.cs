@@ -1,7 +1,6 @@
 ﻿using System.Net;
-using System.Text.Json;
 using System.ComponentModel.DataAnnotations;
-using RecipeCostControl.Data.Dto;
+using RecipeCostControl.API.Extensions;
 
 namespace RecipeCostControl.API.Middlewares
 {
@@ -18,38 +17,18 @@ namespace RecipeCostControl.API.Middlewares
             }
             catch (ValidationException ex)
             {
-                await HandleValidationExceptionAsync(context, ex);
+                await context.Response.SendErrorMessageAsync(HttpStatusCode.BadRequest, ex.Message);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An unexpected error occurred.");
-                await HandleExceptionAsync(context, ex);
-            }
-        }
-
-        private Task HandleValidationExceptionAsync(HttpContext context, Exception exception)
-        {
-            context.Response.ContentType = "application/json";
-            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-
-            var response = new ErrorMessageDto(exception.Message);
-
-            return context.Response.WriteAsync(JsonSerializer.Serialize(response));
-        }
-
-        private Task HandleExceptionAsync(HttpContext context, Exception exception)
-        {
-            context.Response.ContentType = "application/json";
-            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
 #if DEBUG
-            var message = exception.Message;
+                var message = ex.Message;
 #else
-            const message = "Internal Server Error";
+                const message = "Internal Server Error";
 #endif
-            var response = new ErrorMessageDto(message);
-
-            return context.Response.WriteAsync(JsonSerializer.Serialize(response));
+                await context.Response.SendErrorMessageAsync(HttpStatusCode.InternalServerError, message);
+            }
         }
     }
 
