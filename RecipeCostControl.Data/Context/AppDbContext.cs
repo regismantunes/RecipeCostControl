@@ -4,7 +4,7 @@ using RecipeCostControl.Data.Entities;
 
 namespace RecipeCostControl.Data.Context
 {
-    public sealed class MyDbContext(DbContextOptions<MyDbContext> options) : DbContext(options)
+    public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
     {
         public DbSet<MeasurementUnit> MeasurementUnits { get; set; }
         public DbSet<MeasurementUnitConversion> MeasurementUnitConversions { get; set; }

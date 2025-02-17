@@ -4,7 +4,7 @@ using RecipeCostControl.Data.Repositories.Interfaces;
 
 namespace RecipeCostControl.Data.Repositories
 {
-    public sealed class RecipeRepository(MyDbContext context)
+    public sealed class RecipeRepository(AppDbContext context)
         : Repository<Recipe>(context), IRecipeRepository
     {
     }

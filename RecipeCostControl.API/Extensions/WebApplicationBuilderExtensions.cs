@@ -15,10 +15,9 @@ namespace RecipeCostControl.API.Extensions
         public static WebApplicationBuilder AddDatabaseComponents(this WebApplicationBuilder builder)
         {
             builder.Services
-                .AddEntityFrameworkSqlServer()
-                .AddDbContext<MyDbContext>(options =>
-                    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")))
-                .AddScoped<DbContext, MyDbContext>();
+                .AddDbContext<AppDbContext>(options =>
+                    options.UseSqlite(builder.Configuration.GetConnectionString("Default")))
+                .AddScoped<DbContext, AppDbContext>();
 
             return builder;
         }

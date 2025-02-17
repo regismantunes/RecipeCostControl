@@ -10,7 +10,7 @@ namespace RecipeCostControl.Data.Context.Map.Generic
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id)
-                .UseIdentityColumn();
+                .ValueGeneratedOnAdd();
         }
     }
 }

@@ -5,7 +5,7 @@ using RecipeCostControl.Data.Repositories.Interfaces;
 
 namespace RecipeCostControl.Data.Repositories
 {
-    public sealed class MeasuremantUnitRepository(MyDbContext context) : IMeasurementUnitRepository
+    public sealed class MeasuremantUnitRepository(AppDbContext context) : IMeasurementUnitRepository
     {
         public async Task<IEnumerable<MeasurementUnit>> GetAllAsync()
         {

@@ -16,8 +16,8 @@ namespace RecipeCostControl.Data.Migrations
                 name: "MeasurementUnits",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    Id = table.Column<string>(type: "TEXT", maxLength: 5, nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,11 +28,11 @@ namespace RecipeCostControl.Data.Migrations
                 name: "MeasurementUnitConversions",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MeasurementUnitFromId = table.Column<string>(type: "nvarchar(5)", nullable: false),
-                    Multiplier = table.Column<decimal>(type: "decimal(10,5)", nullable: false),
-                    MeasurementUnitToId = table.Column<string>(type: "nvarchar(5)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    MeasurementUnitFromId = table.Column<string>(type: "TEXT", nullable: false),
+                    Multiplier = table.Column<double>(type: "decimal(10,5)", nullable: false),
+                    MeasurementUnitToId = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,10 +55,10 @@ namespace RecipeCostControl.Data.Migrations
                 name: "Packaging",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    MeasurementUnitId = table.Column<string>(type: "nvarchar(5)", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    MeasurementUnitId = table.Column<string>(type: "TEXT", nullable: false),
                     Cost = table.Column<decimal>(type: "decimal(8,4)", nullable: false)
                 },
                 constraints: table =>
@@ -76,11 +76,11 @@ namespace RecipeCostControl.Data.Migrations
                 name: "Recipes",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    MeasurementUnitId = table.Column<string>(type: "nvarchar(5)", nullable: false),
-                    YieldQuantity = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    MeasurementUnitId = table.Column<string>(type: "TEXT", nullable: false),
+                    YieldQuantity = table.Column<uint>(type: "int", nullable: false),
                     Cost = table.Column<decimal>(type: "decimal(8,4)", nullable: false)
                 },
                 constraints: table =>
@@ -98,12 +98,12 @@ namespace RecipeCostControl.Data.Migrations
                 name: "Ingredients",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    MeasurementUnitId = table.Column<string>(type: "nvarchar(5)", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    MeasurementUnitId = table.Column<string>(type: "TEXT", nullable: false),
                     Cost = table.Column<decimal>(type: "decimal(8,4)", nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -126,12 +126,12 @@ namespace RecipeCostControl.Data.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false),
-                    PackagingId = table.Column<int>(type: "int", nullable: true),
-                    MeasurementUnitId = table.Column<string>(type: "nvarchar(5)", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false),
+                    PackagingId = table.Column<int>(type: "INTEGER", nullable: true),
+                    MeasurementUnitId = table.Column<string>(type: "TEXT", nullable: false),
                     Cost = table.Column<decimal>(type: "decimal(8,4)", nullable: false),
                     SellingPrice = table.Column<decimal>(type: "decimal(8,2)", nullable: false)
                 },
@@ -161,12 +161,12 @@ namespace RecipeCostControl.Data.Migrations
                 name: "RecipeItem",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IngredientId = table.Column<int>(type: "int", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    MeasurementUnitId = table.Column<string>(type: "nvarchar(5)", nullable: false),
-                    RecipeId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    IngredientId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Quantity = table.Column<uint>(type: "int", nullable: false),
+                    MeasurementUnitId = table.Column<string>(type: "TEXT", nullable: false),
+                    RecipeId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -208,16 +208,22 @@ namespace RecipeCostControl.Data.Migrations
                 columns: new[] { "Id", "MeasurementUnitFromId", "MeasurementUnitToId", "Multiplier" },
                 values: new object[,]
                 {
-                    { 1, "kg", "gr", 0.001m },
-                    { 2, "gr", "kg", 1000m },
-                    { 3, "lt", "ml", 0.001m },
-                    { 4, "ml", "lt", 1000m }
+                    { 1, "kg", "gr", 0.001 },
+                    { 2, "gr", "kg", 1000.0 },
+                    { 3, "lt", "ml", 0.001 },
+                    { 4, "ml", "lt", 1000.0 }
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_MeasurementUnitId",
                 table: "Ingredients",
                 column: "MeasurementUnitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Ingredients_Name",
+                table: "Ingredients",
+                column: "Name",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ingredients_RecipeId",
@@ -240,9 +246,21 @@ namespace RecipeCostControl.Data.Migrations
                 column: "MeasurementUnitId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Packaging_Name",
+                table: "Packaging",
+                column: "Name",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Products_MeasurementUnitId",
                 table: "Products",
                 column: "MeasurementUnitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_Name",
+                table: "Products",
+                column: "Name",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_PackagingId",
@@ -273,6 +291,12 @@ namespace RecipeCostControl.Data.Migrations
                 name: "IX_Recipes_MeasurementUnitId",
                 table: "Recipes",
                 column: "MeasurementUnitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Recipes_Name",
+                table: "Recipes",
+                column: "Name",
+                unique: true);
         }
 
         /// <inheritdoc />
