@@ -1,5 +1,6 @@
 # Ignore Visual Studio user-specific files
 .vs/
+.vscode/
 
 # Ignore compiled files
 *.dll
@@ -34,3 +35,7 @@
 # Ignore build output directories
 bin/
 obj/
+/RecipeCostControl.Data.Dto/obj/Debug/net9.0/RecipeCostControl.Data.Dto.AssemblyInfo.cs
+/RecipeCostControl.Data.Dto/obj/Debug/net9.0/RecipeCostControl.Data.Dto.AssemblyInfoInputs.cache
+/RecipeCostControl.Services/obj/Debug/net9.0/RecipeCostControl.Services.AssemblyInfo.cs
+/RecipeCostControl.Services/obj/Debug/net9.0/RecipeCostControl.Services.AssemblyInfoInputs.cache
