@@ -18,9 +18,9 @@ namespace RecipeCostControl.API.Controllers
         }
 
         [HttpGet("conversion/{idFrom}/{idTo}")]
-        public async Task<ActionResult<dynamic>> GetConversion(string idFrom, string idTo)
+        public ActionResult<dynamic> GetConversion(string idFrom, string idTo)
         {
-            var entity = await service.GetConversionAsync(idFrom, idTo);
+            var entity = service.GetConversionAsync(idFrom, idTo);
             if (entity is null)
                 return NotFound();
 
