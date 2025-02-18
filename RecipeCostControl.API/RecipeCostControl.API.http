@@ -1,6 +1,6 @@
-@RecipeCostControl.API_HostAddress = http://localhost:5236
+@RecipeCostControl.API_HostAddress = http://localhost:32772
 
-GET {{RecipeCostControl.API_HostAddress}}/weatherforecast/
+GET {{RecipeCostControl.API_HostAddress}}/api/
 Accept: application/json
 
 ###

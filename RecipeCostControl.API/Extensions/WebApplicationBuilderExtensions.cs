@@ -60,7 +60,6 @@ namespace RecipeCostControl.API.Extensions
             var app = builder.Build();
 
             app.UseHttpsRedirection()
-                .UseAuthorization()
                 .UseMiddleware<ExceptionHandlingMiddleware>();
 
             //app.MapControllers();
