@@ -10,17 +10,50 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Setup Recipe Cost Control Application
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '9.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build -c Release
+    
     - name: Testes
-      run: dotnet test --configuration Release
+      run: dotnet test -c Release
+    
     - name: Deploy
       if: github.ref == 'refs/heads/main'
+      run: dotnet publish -c Release -o /app/publish /p:PublishSingleFile=true /p:IncludeSymbols=false
+    
+    - name: Build and push Docker image to ACR
+      uses: azure/docker-login@v2
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Build and tag Docker image
       run: |
-        # Comandos para deploy da sua aplicação
-        # Exemplo: dotnet publish -c Release -o ./publish
-        # E depois copiar os arquivos para o servidor de destino
+          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }} .
+          docker tag ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }} ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+    
+    - name: Push Docker image to ACR
+      run: |
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }}
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+
+    - name: Deploy to Azure App Service
+      uses: azure/appservice-deploy@v3
+      with:
+        app-name: ${{ secrets.AZURE_APP_SERVICE_NAME }}
+        slot-name: 'production' # Or your slot name
+        package: /app/publish # Path to the published output (even though we're using a container)
+        images: ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+
+    - name: Copy SQLite Database to Azure Files
+      uses: azure/CLI@v1
+      with:
+        azcli-script: |
+          az storage fs upload -s Data/your_database.db --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --file-system ${{ secrets.AZURE_STORAGE_FILE_SYSTEM_NAME }} --destination-path your_database.db --overwrite    
