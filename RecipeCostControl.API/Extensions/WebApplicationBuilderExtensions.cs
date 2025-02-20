@@ -15,15 +15,9 @@ namespace RecipeCostControl.API.Extensions
     {
         public static WebApplicationBuilder AddDatabaseComponents(this WebApplicationBuilder builder)
         {
-            string? connectionString
-#if DEBUG
-            = null;
-#else
-            = builder.Configuration.GetConnectionString("Default");
-#endif
             builder.Services
                 .AddDbContext<AppDbContext>(options =>
-                    options.Configure(connectionString))
+                    options.UseConfiguration(builder.Configuration))
                 .AddScoped<DbContext, AppDbContext>();
 
             return builder;

@@ -1,19 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace RecipeCostControl.Data.Extensions
 {
     public static class DbContextOptionsBuilderExtensions
     {
-        private const string DefaultConnectionString = "Data Source=recipecostcontrol.db";
+        private const string ConnectionStringName = "Default";
 
-        public static DbContextOptionsBuilder Configure(this DbContextOptionsBuilder optionsBuilder, string? connectionString = null)
+        public static T UseConfiguration<T>(this T optionsBuilder, IConfiguration configuration) where T : DbContextOptionsBuilder
         {
-            return optionsBuilder.UseSqlite(connectionString ?? DefaultConnectionString);
-        }
-
-        public static DbContextOptionsBuilder<T> Configure<T>(this DbContextOptionsBuilder<T> optionsBuilder, string? connectionString = null) where T : DbContext
-        {
-            return optionsBuilder.UseSqlite(connectionString ?? DefaultConnectionString);
+            var connectionString = configuration.GetConnectionString(ConnectionStringName);
+            return (T)optionsBuilder.UseSqlite(connectionString);
         }
     }
 }
