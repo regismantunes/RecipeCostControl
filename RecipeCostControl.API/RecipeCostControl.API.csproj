@@ -30,4 +30,10 @@
     <ProjectReference Include="..\RecipeCostControl.Services\RecipeCostControl.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="entrypoint.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

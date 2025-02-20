@@ -24,4 +24,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["dotnet", "RecipeCostControl.API.dll"]
+RUN chmod +x /app/entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["dotnet", "RecipeCostControl.API.dll"]
