@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using RecipeCostControl.Data.Extensions;
 
 namespace RecipeCostControl.Data.Context
 {
@@ -7,8 +8,8 @@ namespace RecipeCostControl.Data.Context
     {
         public AppDbContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlite("Data Source=recipecostcontrol.db");
+            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>()
+                .Configure();
 
             return new AppDbContext(optionsBuilder.Options);
         }

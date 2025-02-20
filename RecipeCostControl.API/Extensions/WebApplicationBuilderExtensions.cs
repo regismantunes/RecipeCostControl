@@ -7,6 +7,7 @@ using RecipeCostControl.Services.Interfaces;
 using RecipeCostControl.Services;
 using RecipeCostControl.API.Middlewares;
 using RecipeCostControl.API.Extensions;
+using RecipeCostControl.Data.Extensions;
 
 namespace RecipeCostControl.API.Extensions
 {
@@ -14,9 +15,15 @@ namespace RecipeCostControl.API.Extensions
     {
         public static WebApplicationBuilder AddDatabaseComponents(this WebApplicationBuilder builder)
         {
+            string? connectionString
+#if DEBUG
+            = null;
+#else
+            = builder.Configuration.GetConnectionString("Default");
+#endif
             builder.Services
                 .AddDbContext<AppDbContext>(options =>
-                    options.UseSqlite(builder.Configuration.GetConnectionString("Default")))
+                    options.Configure(connectionString))
                 .AddScoped<DbContext, AppDbContext>();
 
             return builder;
