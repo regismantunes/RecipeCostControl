@@ -16,9 +16,6 @@ jobs:
       with:
         dotnet-version: '9.x'
     
-    - name: Restore Data dependencies
-      run: dotnet restore RecipeCostControl.Data/RecipeCostControl.Data.csproj
-    
     - name: Restore API dependencies
       run: dotnet restore RecipeCostControl.API/RecipeCostControl.API.csproj
       
