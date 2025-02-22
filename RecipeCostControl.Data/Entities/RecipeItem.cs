@@ -6,16 +6,16 @@
 
         public int IngredientId { get; set; }
 
-        public Ingredient Ingredient { get; set; }
+        public required Ingredient Ingredient { get; set; }
 
         public uint Quantity { get; set; }
 
-        public string MeasurementUnitId { get; set; }
+        public required string MeasurementUnitId { get; set; }
 
-        public MeasurementUnit MeasurementUnit { get; set; }
+        public required MeasurementUnit MeasurementUnit { get; set; }
 
         public int RecipeId { get; set; }
 
-        public Recipe Recipe { get; set; }
+        public required Recipe Recipe { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using RecipeCostControl.Services.Interfaces;
 using RecipeCostControl.Services;
 using RecipeCostControl.API.Middlewares;
 using RecipeCostControl.API.Extensions;
+using RecipeCostControl.Data.Extensions;
 
 namespace RecipeCostControl.API.Extensions
 {
@@ -16,7 +17,7 @@ namespace RecipeCostControl.API.Extensions
         {
             builder.Services
                 .AddDbContext<AppDbContext>(options =>
-                    options.UseSqlite(builder.Configuration.GetConnectionString("Default")))
+                    options.UseConfiguration(builder.Configuration))
                 .AddScoped<DbContext, AppDbContext>();
 
             return builder;
@@ -60,7 +61,6 @@ namespace RecipeCostControl.API.Extensions
             var app = builder.Build();
 
             app.UseHttpsRedirection()
-                .UseAuthorization()
                 .UseMiddleware<ExceptionHandlingMiddleware>();
 
             //app.MapControllers();

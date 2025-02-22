@@ -35,3 +35,7 @@
 # Ignore build output directories
 bin/
 obj/
+
+AzureServicePrincipal.json
+
+.local/

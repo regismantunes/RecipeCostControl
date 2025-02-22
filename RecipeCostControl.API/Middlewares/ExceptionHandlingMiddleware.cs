@@ -25,7 +25,7 @@ namespace RecipeCostControl.API.Middlewares
 #if DEBUG
                 var message = ex.Message;
 #else
-                const message = "Internal Server Error";
+                const string message = "Internal Server Error";
 #endif
                 await context.Response.SendErrorMessageAsync(HttpStatusCode.InternalServerError, message);
             }
