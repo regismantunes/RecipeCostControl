@@ -17,17 +17,17 @@ jobs:
         dotnet-version: '9.x'
     
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore RecipeCostControl.sln
     
     - name: Build
-      run: dotnet build -c Release
+      run: dotnet build -c Release RecipeCostControl.API/RecipeCostControl.API.csproj
     
     - name: Testes
       run: dotnet test -c Release
     
     - name: Deploy
       if: github.ref == 'refs/heads/main'
-      run: dotnet publish -c Release -o /app/publish /p:PublishSingleFile=true /p:IncludeSymbols=false
+      run: dotnet publish -c Release RecipeCostControl.API/RecipeCostControl.API.csproj -o /app/publish /p:PublishSingleFile=true /p:IncludeSymbols=false
     
     - name: Build and push Docker image to ACR
       uses: azure/docker-login@v2
