@@ -45,7 +45,7 @@ jobs:
           docker push ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
 
     - name: Deploy to Azure App Service
-      uses: azure/appservice-deploy@v3
+      uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ secrets.AZURE_APP_SERVICE_NAME }}
         slot-name: 'production' # Or your slot name
@@ -56,4 +56,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         azcli-script: |
-          az storage fs upload -s Data/your_database.db --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --file-system ${{ secrets.AZURE_STORAGE_FILE_SYSTEM_NAME }} --destination-path your_database.db --overwrite    
+          az storage fs upload -s data/recipecostcontrol.db --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --file-system ${{ secrets.AZURE_STORAGE_FILE_SYSTEM_NAME }} --destination-path your_database.db --overwrite    
