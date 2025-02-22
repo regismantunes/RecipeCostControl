@@ -107,21 +107,5 @@ namespace RecipeCostControl.Tests.Moq
             await Assert.ThrowsAsync<InvalidOperationException>(() => _sut.InsertAsync(newEntity2));
         }
 
-        [Fact]
-        public async Task FlatronsTestApi()
-        {
-            using var httpClient = new HttpClient();
-            using var multipartFormContent = new MultipartFormDataContent();
-
-            var fileStreamContent = new StreamContent(File.OpenRead("D:\\Source\\Repos\\rails_node_test_regismantunes\\data1.csv"));
-            fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("multipart/form-data");
-
-            multipartFormContent.Add(fileStreamContent, name: "file", fileName: "data.csv");
-
-            // Send POST request
-            var response = await httpClient.PostAsync("http://localhost:5169/api/products/addfromfile", multipartFormContent);
-
-            Assert.True(response.IsSuccessStatusCode);
-        }
     }
 }
