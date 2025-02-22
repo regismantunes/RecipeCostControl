@@ -23,7 +23,7 @@ jobs:
       run: dotnet build -c Release RecipeCostControl.API/RecipeCostControl.API.csproj
     
     - name: Testes
-      run: dotnet test -c Release
+      run: dotnet test -c Release RecipeCostControl.Tests/RecipeCostControl.Tests.csproj
     
     - name: Deploy
       if: github.ref == 'refs/heads/main'
