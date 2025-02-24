@@ -10,6 +10,7 @@ jobs:
 
     env:
       ACR_NAME: recipecostcontrolapi
+      REPOSITORY: ${{ github.repository.toLowerCase() }}
 
     steps:
     - uses: actions/checkout@v3
@@ -44,13 +45,13 @@ jobs:
     
     - name: Build and tag Docker image
       run: |
-          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }} .
-          docker tag ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }} ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }} .
+          docker tag ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }} ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:latest
     
     - name: Push Docker image to ACR
       run: |
-          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:${{ github.sha }}
-          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }}
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:latest
 
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
@@ -58,7 +59,7 @@ jobs:
         app-name: ${{ secrets.AZURE_APP_SERVICE_NAME }}
         slot-name: 'production' # Or your slot name
         package: /app/publish # Path to the published output (even though we're using a container)
-        images: ${{ env.ACR_NAME }}.azurecr.io/${{ github.repository }}:latest
+        images: ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:latest
 
     - name: Copy SQLite Database to Azure Files
       uses: azure/CLI@v1
