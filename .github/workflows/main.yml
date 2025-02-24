@@ -10,7 +10,7 @@ jobs:
 
     env:
       ACR_NAME: recipecostcontrolapi
-      REPOSITORY: ${{ tolower(github.repository) }}
+      REPOSITORY: recipecostcontrol
 
     steps:
     - uses: actions/checkout@v3
