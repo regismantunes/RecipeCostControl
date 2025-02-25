@@ -45,7 +45,7 @@ jobs:
     
     - name: Build and tag Docker image
       run: |
-          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }} .
+          docker build -t ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }} -f RecipeCostControl.API/Dockerfile .
           docker tag ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:${{ github.sha }} ${{ env.ACR_NAME }}.azurecr.io/${{ env.REPOSITORY }}:latest
     
     - name: Push Docker image to ACR
