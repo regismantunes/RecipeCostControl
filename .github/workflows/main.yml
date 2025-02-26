@@ -40,6 +40,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        allow-no-subscriptions: true
     
     - name: Build and push Docker image to ACR
       uses: azure/docker-login@v2
