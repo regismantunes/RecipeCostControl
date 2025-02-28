@@ -36,12 +36,6 @@ jobs:
       if: github.ref == 'refs/heads/main'
       run: dotnet publish -c Release RecipeCostControl.API/RecipeCostControl.API.csproj -o /app/publish /p:PublishSingleFile=true /p:IncludeSymbols=false
 
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-        allow-no-subscriptions: true
-    
     - name: Build and push Docker image to ACR
       uses: azure/docker-login@v2
       with:
