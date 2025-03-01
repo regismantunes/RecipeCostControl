@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      ACR_NAME: recipecostcontrolapi
+      ACR_NAME: recipecostcontrolapi.azurecr.io
       REPOSITORY: recipecostcontrol
 
     steps:
