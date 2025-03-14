@@ -31,7 +31,7 @@ jobs:
       with:
         push: true
         tags: recipecostcontrolwebapi.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32460a48ee5b435dbe9d91291aaaa0e2 }}/recipecostcontrolapi:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./RecipeCostControl.API/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
