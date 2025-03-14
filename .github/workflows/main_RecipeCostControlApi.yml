@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://recipecostcontrolwebapi.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_cdf91cb6a01741868a51cfb8369dfca4 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_a54e34d1d67a4cbbb7fb35e1456bc29b }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_32460a48ee5b435dbe9d91291aaaa0e2 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_9616c4a69f6449619f10f9aba431c6f0 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: recipecostcontrolwebapi.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_cdf91cb6a01741868a51cfb8369dfca4 }}/recipecostcontrolapi:${{ github.sha }}
+        tags: recipecostcontrolwebapi.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32460a48ee5b435dbe9d91291aaaa0e2 }}/recipecostcontrolapi:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'RecipeCostControlApi'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d9efeb53d57d4a50aab507ae9ca09270 }}
-        images: 'recipecostcontrolwebapi.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_cdf91cb6a01741868a51cfb8369dfca4 }}/recipecostcontrolapi:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_11c9632fbcf04e8ea73dba62d7c49e54 }}
+        images: 'recipecostcontrolwebapi.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_32460a48ee5b435dbe9d91291aaaa0e2 }}/recipecostcontrolapi:${{ github.sha }}'
